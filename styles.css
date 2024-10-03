@@ -1,0 +1,59 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    flex-direction: column;
+}
+
+.simulation-container {
+    display: flex;
+    gap: 20px;
+}
+
+.room-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.room {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+    background-color: white;
+    border: 2px solid black;
+    margin-top: 10px;  /* Adicionar espaço entre o título e a sala */
+}
+
+#grid-random, #grid-ia, #grid-brain {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+    grid-template-rows: repeat(20, 1fr);
+}
+
+.grid-cell {
+    width: 100%;
+    height: 100%;
+    border: 1px solid lightgray;
+    background-color: white;
+}
+
+.cleaned {
+    background-color: lightblue;
+}
+
+#vacuum-random, #vacuum-ia, #vacuum-brain {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    z-index: 10;
+}

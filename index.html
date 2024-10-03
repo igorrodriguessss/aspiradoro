@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulador de Robô Aspirador</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="simulation-container">
+        <div class="room-container">
+            <h2>Movimento Randômico - <span id="random-percent">0%</span></h2>
+            <div class="room">
+                <div id="grid-random"></div>
+                <img id="vacuum-random" src="vacuum.png" alt="Aspirador de pó">
+            </div>
+        </div>
+        <div class="room-container">
+            <h2>Movimento com IA (Q-Learning) - <span id="ia-percent">0%</span></h2>
+            <div class="room">
+                <div id="grid-ia"></div>
+                <img id="vacuum-ia" src="vacuum.png" alt="Aspirador de pó">
+            </div>
+        </div>
+        <div class="room-container">
+            <h2>Movimento com SLAM - <span id="brain-percent">0%</span></h2>
+            <div class="room">
+                <div id="grid-brain"></div>
+                <img id="vacuum-brain" src="vacuum.png" alt="Aspirador de pó">
+            </div>
+        </div>
+    </div>
+
+    <!-- Carregar as bibliotecas TensorFlow.js e Brain.js -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="https://cdn.jsdelivr.net/npm/brain.js"></script>
+
+    <!-- Carregar os scripts personalizados -->
+    <script src="script.js"></script>
+    <script src="random.js"></script>
+    <script src="qlearning.js"></script>
+    <script src="brainjs.js"></script>
+</body>
+</html>
